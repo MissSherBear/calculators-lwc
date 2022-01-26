@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-m-around_small">
+        <lightning-card title="Calculator" icon-name="custom:custom34">
+            <lightning-input type="number" value={firstNumber} label="Number 1" name="number1" onchange={onNumberOneChange}></lightning-input>
+            <lightning-input type="number" value={secondNumber} label="Number 2" name="number2" onchange={onNumberTwoChange}></lightning-input>
+                <b>Result: </b><p>{resultValue}</p>
+            <br/>
+            <lightning-button variant="brand" label="Add" onclick={doSum}></lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Subtract" onclick={doSubt}></lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Divide" onclick={doDiv}></lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Multiply" onclick={doMulti}></lightning-button>
+        </lightning-card>
+    </div>
+</template>
