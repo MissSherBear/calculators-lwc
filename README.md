@@ -4,7 +4,7 @@ A simple calculator and a more advanced numerator component
 ![Alt text](./calculatorlwc.png "Calculator LWC")
 
 ### Simple Calculator
-calculator.html
+##### calculator Component
 ```html
 <template>
     <div class="slds-m-around_small">
@@ -24,7 +24,6 @@ calculator.html
     </div>
 </template>
 ```
-calculator.js
 ```js
 import { LightningElement, track } from 'lwc';
 
@@ -54,7 +53,7 @@ export default class Calculator extends LightningElement {
 }
 ```
 ### Advanced Numerator Calculator
-numerator.html
+##### numerator Parent Component
 ```html
 <template>
     <lightning-card title="Numerator" icon-name="action:manage_perm_sets">
@@ -65,7 +64,6 @@ numerator.html
     </lightning-card>
 </template>
 ```
-numerator.js
 ```js
 import { LightningElement } from 'lwc';
 
@@ -87,7 +85,7 @@ export default class Numerator extends LightningElement {
     }
 }
 ```
-controls.html
+##### controls Child Component of numerator
 ```html
 <template>
     <lightning-card title="Controls" icon-name="action:upload">
@@ -107,7 +105,6 @@ controls.html
     </lightning-card>
 </template>
 ```
-controls.js
 ```js
 import { LightningElement } from 'lwc';
 
@@ -127,13 +124,12 @@ export default class Controls extends LightningElement {
     factors = [0,2,3,4,5,6];
 }
 ```
-button.html
+##### button Child Component of numerator
 ```html
 <template>
     <lightning-button label={label} data-factor={label} icon-name={icon} onclick={handleButton}></lightning-button>
 </template>
 ```
-button.js
 ```js
 import { LightningElement, api } from 'lwc';
 
